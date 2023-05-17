@@ -1,0 +1,23 @@
+.fast-fade-enter-from,
+.fast-fade-leave-to,
+.standard-fade-enter-from,
+.standard-fade-leave-to,
+.slow-fade-enter-from,
+.slow-fade-leave-to {
+  opacity: 0;
+}
+
+.fast-fade-enter-active,
+.fast-fade-leave-active {
+  transition: all 0.2s ease;
+}
+
+.standard-fade-enter-active,
+.standard-fade-leave-active {
+  transition: all 0.5s ease;
+}
+
+.slow-fade-enter-active,
+.slow-fade-leave-active {
+  transition: all 0.8s ease;
+}

@@ -1,0 +1,325 @@
+.white-font{
+    color: white;
+}
+
+.opacity-half{
+  opacity: 0.7;
+}
+
+.black-font{
+  color: black;
+}
+
+.font-size-too-small{
+    font-size: 1vmin;
+}
+
+.font-size-medium-small{
+  font-size: 2vmin;
+}
+
+.font-size-small{
+    font-size: 3vmin;
+}
+
+.font-size-basic{
+    font-size: 5vmin;
+}
+
+.font-size-large{
+    font-size: 8vmin;
+}
+
+.user-logo-img{
+  max-width: 55px;
+  max-height: 55px;
+  min-width: 45px;
+  min-height: 45px;
+  width: 5vmax;
+  height: 5vmax;
+}
+
+.test-border{
+  border: 1px solid orange;
+}
+
+.border-radius-a{
+  border-radius:5px;
+}
+
+.border-radius-b{
+  border-radius:10px;
+}
+
+.border-radius-c{
+  border-radius:15px;
+}
+
+.border-radius-d{
+  border-radius:20px;
+}
+
+.border-radius-e{
+  border-radius:30px;
+}
+
+.over-cursor:hover{
+  cursor: pointer;
+}
+
+.over-cursor-rotate-half-n-half:hover{
+  transform: rotate(0.25turn);
+}
+
+.over-cursor-rotate-half:hover{
+  transform: rotate(0.5turn);
+}
+
+.rotate-half{
+  transform: rotate(0.5turn);
+}
+
+.over-cursor-rotate-standard:hover{
+  transform: rotate(1turn);
+}
+
+.is-have-fast-transition{
+  transition: all 0.3s ease;
+}
+
+.is-have-plain-transition{
+  transition: all 0.5s ease;
+}
+
+.is-have-slow-transition{
+  transition: all 0.8s ease;
+}
+
+#rightStickyBar, #leftStickyBar{
+  height: 70vh;
+}
+
+.icon-size-standard{
+  font-size: 40px;
+}
+
+.over-color-trans-orange:hover{
+  color: orange;
+  transition: all 0.2s ease;
+}
+
+.over-green:hover{
+  color: rgb(5, 250, 156);
+}
+
+.over-red:hover{
+  color: rgb(255, 51, 51);
+}
+
+.over-blue:hover{
+  color: rgb(26, 102, 241);
+}
+
+.over-yellow:hover{
+  color: rgb(255, 255, 0);
+}
+
+.font-green{
+  color: rgb(5, 250, 156);
+}
+
+.font-red{
+  color: rgb(255, 51, 51);
+}
+
+.font-blue{
+  color: rgb(26, 102, 241);
+}
+
+.font-yellow{
+  color: rgb(255, 255, 0);
+}
+
+.over-background-test:hover{
+  background-color: orange;
+}
+
+.font-bold{
+  font-weight: bold;
+}
+
+.scroll-lock {
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1000px){
+  .fspss{
+    font-size: 8px;
+  }
+
+  .fsps{
+    font-size: 12px;
+  }
+
+  .fspms{
+    font-size: 14px;
+  }
+
+  .fspm{
+    font-size: 16px;
+  }
+
+  .fspl{
+    font-size: 20px;
+  }
+
+  .fspll{
+    font-size: 24px;
+  }
+
+  .fsplll{
+    font-size: 28px;
+  }
+
+  .fspllll{
+    font-size: 40px;
+  }
+
+  .left-sticky-width,
+  #leftStickyBar{
+      width: 8vw;
+  }
+
+  .right-sticky-width,
+  #rightStickyBar{
+      width: 0vw;
+  }
+
+  .main-container-width{
+    width: 85vw;
+  }
+
+  #mainContainer{
+      width: 85vw;
+      height: 100vh;
+  }
+
+  .icon-size-standard{
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 1000px){
+  .fspss{
+    font-size: 10px;
+  }
+
+  .fsps{
+    font-size: 14px;
+  }
+
+  .fspms{
+    font-size: 16px;
+  }
+
+  .fspm{
+    font-size: 18px;
+  }
+
+  .fspl{
+    font-size: 22px;
+  }
+
+  .fspll{
+    font-size: 26px;
+  }
+
+  .fsplll{
+    font-size: 30px;
+  }
+
+  .fspllll{
+    font-size: 45px;
+  }
+
+  .left-sticky-width,
+  #leftStickyBar{
+      width: 12vw;
+  }
+
+  .right-sticky-width,
+  #rightStickyBar{
+      width: 15vw;
+  }
+
+  .main-container-width{
+    width: 40vw;
+  }
+
+  #mainContainer{
+      width: 40vw;
+      height: 100vh;
+  }
+
+  .icon-size-standard{
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 1500px){
+  .fspss{
+    font-size: 14px;
+  }
+
+  .fsps{
+    font-size: 16px;
+  }
+
+  .fspms{
+    font-size: 18px;
+  }
+
+  .fspm{
+    font-size: 20px;
+  }
+
+  .fspl{
+    font-size: 24px;
+  }
+
+  .fspll{
+    font-size: 28px;
+  }
+
+  .fsplll{
+    font-size: 32px;
+  }
+
+  .fspllll{
+    font-size: 45px;
+  }
+
+  .left-sticky-width,
+  #leftStickyBar{
+      width: 12vw;
+  }
+
+  .right-sticky-width,
+  #rightStickyBar{
+      width: 15w;
+  }
+
+  .main-container-width{
+    width: 40vw;
+  }
+
+  #mainContainer{
+      width: 40vw;
+      height: 100vh;
+  }
+
+  .icon-size-standard{
+    font-size: 40px;
+  }
+}
+

@@ -1,0 +1,66 @@
+AES_SECRET_KEY='RAINBOWTABLEISNOTWORKING'
+HASH_SECRET_KEY='GNIKROWTONSIELBATWOBNIAR'
+PORT=80
+HOST='127.0.0.1'
+
+# DB_HOST='3.225.209.211'
+# DB_USER='accro'
+# DB_PW='accro'
+# DB_NAME='accro'
+# DB_PORT=3306
+
+DB_HOST='127.0.0.1'
+DB_USER='root'
+DB_PW='hj306210'
+DB_NAME='accro'
+DB_PORT=3306
+
+SMTP_ID='akdldhtls@gmail.com'
+SMTP_PW='vfhapeqfejycmumn'
+SMTP_HOST='smtp.gmail.com'
+SMTP_SECURE=false
+SMTP_PORT=587
+
+BLOCK_TABLE='communityblock'
+FOLLOW_TABLE='communityfollower'
+NOTIFI_TABLE='(SELECT a.*, b.name AS name FROM communityNotifi AS a LEFT OUTER JOIN (SELECT px1.*, px2.name AS name, px2.email AS email, px2.address AS address, px2.phone AS phone FROM userinfo as px1 LEFT OUTER JOIN moreinfo as px2 ON px1.id=px2.id) AS b ON a.publisher=b.id)'
+BOARD_TABLE='communityboards'
+COMMENT_TABLE='communityboardComments'
+LOGO_TABLE='communityuserlogopath'
+BOARD_REC_TABLE='communityrecommendboard'
+BOARD_OBJ_TABLE='communitybbjectionboard'
+COMMENT_REC_TABLE='communityrecommendcomment'
+COMMENT_OBJ_TABLE='communityobjectioncomment'
+CASH_HISTORY_TABLE='cashhistory'
+CHARGE_LOG_TABLE='chargelog'
+PRODUCT_LOG_TABLE='productlog'
+BAN_TABLE='banuser'
+NOTIFI_TABLE2='communitynotifi'
+
+QNA_TABLE='qnatable'
+
+FEED_BIG_TABLE="feedbigtag"
+FEED_SMALL_TABLE="feedsmalltag"
+FEED_TABLE="feedbacktable"
+FEED_REC_TABLE="feedbackrecommendtable"
+
+FEED_TOTAL_TABLE="(SELECT *, (SELECT fbt.NAME FROM feedbigtag AS fbt WHERE fbt.tag=ft.bigTag) AS bigName, (SELECT fst.NAME FROM feedsmalltag AS fst WHERE fst.bigTag=ft.bigTag AND fst.tag=ft.smallTag) AS smallName, (SELECT COUNT(*) FROM feedbackrecommendtable AS frt WHERE frt.findex=ft.findex AND frt.recType='o') AS rec, (SELECT COUNT(*) FROM feedbackrecommendtable AS frt WHERE frt.findex=ft.findex AND frt.recType='x') AS unrec FROM feedbacktable AS ft) AS fff"
+
+GOODS_TABLE="goodstable"
+GOODS_LOG_TABLE="goodslogtable"
+GOODS_RECOMMEND_TABLE="goodsrecommend"
+
+ALLOW_MIMETYPES='image/png image/gif image/jpg image/jpeg'
+BAN_TYPES='x p'
+
+RESTAPI='4042630409214028'
+RESTAPIKEYS='152efbdca51b3a4de8128fdd31b60d6d0ac09e8a6eeae2ba8eccebfb25ea46765079326381025f0c'
+
+USERINFO_UNION_MOREINFO='(SELECT px1.*, px2.name AS name, px2.email AS email, px2.address AS address, px2.phone AS phone FROM userinfo as px1 LEFT OUTER JOIN moreinfo as px2 ON px1.id=px2.id)'
+USERINFO_UNION_MOREINFO_GAMEINFO='(SELECT px3.*, px4.usecar AS usecar, px4.usegun AS usegun, px4.invitf, px4.difficult, px4.connect FROM (SELECT px1.*, px2.name AS name, px2.email AS email, px2.address AS address, px2.phone AS phone FROM userinfo as px1 LEFT OUTER JOIN moreinfo as px2 ON px1.id=px2.id) AS px3 LEFT OUTER JOIN gameinfo AS px4 ON px3.id=px4.id)'
+
+FRINFOLL="((SELECT * FROM friend) UNION (SELECT communityfollower.id AS friend, communityfollower.follow AS id FROM communityfollower))"
+
+CASHHISTORY_UNION_CHARGELOG='(SELECT cl.*, ch.id, ch.timeStamp, ch.ip, ch.type, ch.price FROM cashHistory AS ch, chargeLog AS cl WHERE ch.chindex=cl.chindex)'
+
+HIDELEVEL_NOT_3_BOARD="(SELECT px5.nickName, px5.logoPath, px6.*, (SELECT COUNT(*) FROM communityrecommendboard WHERE bindex=px6.index AND recType='o') AS recommendCount, (SELECT COUNT(*) FROM communityrecommendboard WHERE bindex=px6.index AND recType='x') AS unRecommendCount, (select count(*) from communityobjectionboard where bindex=px6.index) as objectionCount, (select count(*) from communityboardcomments where boardIndex=px6.index) as commentsCount FROM (SELECT px3.*, px4.logoPath FROM (SELECT px1.id, px2.name AS nickName FROM userinfo as px1 LEFT OUTER JOIN moreinfo as px2 ON px1.id=px2.id) AS px3 LEFT OUTER JOIN communityuserlogopath AS px4 ON px3.id=px4.id) AS px5 RIGHT OUTER JOIN communityboards AS px6 ON px5.id=px6.uploadId WHERE px6.hideLevel!=3)"

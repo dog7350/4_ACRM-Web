@@ -1,0 +1,1 @@
+console.log(0 || 'Hel o'|| 'Hello' || 'Hel o');
